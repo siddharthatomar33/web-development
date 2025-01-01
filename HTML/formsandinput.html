@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms and input tag</title>
+  </head>
+  <body>
+    <h2>this is HTMl forms tutorial</h2>
+    <form action="backend.php">
+      <div>Name:<input type="text" name="myname" /></div>
+      <div>role:<input type="text" name="myrole" /></div>
+      <div>Email:<input type="text" name="myemail" /></div>
+      <div>Date:<input type="data" value="mydata" /></div>
+      <div>Bonus:<input type="number" value="mybonus" /></div>
+      <div>
+          <input type="checkbox" value="my eligiblity" id="are you eligible?" />
+          <label for="are you eligible?">are you eligible?</label>
+        </div>
+        <label for="gender">Gender</label>
+        <div id="gender">
+            <input type="radio" value="mygender" id="male" />
+            <label for="male">male</label>
+            <input type="radio" name="mygender"id="female" />
+            <label for="female">female</label>
+        <input id="others" type="radio" value="mygender" />
+        <label for="others">others</label>
+      </div>
+      <div>
+        Write about yourself here<br />
+        <textarea name="mytext" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="submit now" />
+        <input type="reset" value="reset now" />
+      </div>
+      <div>
+        <label for="car">Car</label>
+        <select name="mycar" id="car">
+        <option value="nexon">NEXON</option>
+        <option value="taigo">TAIGO</option>
+        <option value="altroz">ALTROZ</option>
+    </select>
+    </div>
+    </form>
+  </body>
+</html>
