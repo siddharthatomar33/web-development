@@ -1,0 +1,25 @@
+<!-- 1: Simple Navigation BarObjective: Create a responsive navigation bar using Flexbox.Requirements:
+The navigation bar should have the following links: Home, About, Services, Contact.
+Align the links horizontally and distribute them equally across the navbar.
+The navbar should be sticky at the top of the page.
+Change the background color of the links when hovered. -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        .navbar { display: flex; justify-content: space-around; position: sticky; top: 0; background-color: #333; } .navbar a { color: white; padding: 14px 20px; text-decoration: none; } .navbar a:hover { background-color: #ddd; color: black; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>      
+</body>
+</html>
