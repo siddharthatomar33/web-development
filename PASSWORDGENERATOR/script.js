@@ -17,3 +17,6 @@ let passwordlength=10;
 let checkbox=1;
 //set strength circle to grey
  
+handSlider=()=>{
+    
+}
