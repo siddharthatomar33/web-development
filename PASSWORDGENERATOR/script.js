@@ -45,6 +45,11 @@ function generateLowerCase(){
 function generateupperCase(){
     return String.fromCharCode( getRndInteger(65,91));
 }
-function generateSymbol(){
 
+function generateSymbol(){
+    const randNUM=getRndInteger(0,symbols.length);
+    return symbols.charAt(randNUM);
+}
+function calcstrength(){
+    
 }
