@@ -126,6 +126,39 @@ generatebtn.addEventListener('click',()=>{
     if(checkCount<=0)
         return;
     if(passwordlength<checkCount){
-        
+        passwordlength=checkCount;
+        handleSlider();
     }
+
+    //new password journey
+    //remove old pwd
+    password="";
+
+    //lets put the stuff mentioned by the checkboxes
+    // if(uppercasecheck.checked){
+    //     password+=generateupperCase();
+    // }
+    // if(lowercasecheck.checked){
+    //     password+=generateLowerCase();
+    // }
+    // if(numberCheck.checked){
+    //     password+=generateRandomNumber();
+    // }
+    // if(symbolsCheck.checked){
+    //     password+=generateSymbol();
+    // }
+    let funcArr=[];
+    if(uppercasecheck.checked){
+        funcArr.push(generateupperCase);
+    }
+    if(lowercasecheck.checked){
+        funcArr.push(generateLowerCase);
+    }
+    if(numberCheck.checked){
+        funcArr.push(generateRandomNumber);
+    }
+    if(symbolsCheck.checked)
+        funcArr.push(generateSymbol);
+    
+
 });
