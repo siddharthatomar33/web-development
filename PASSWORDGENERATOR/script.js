@@ -6,11 +6,12 @@ const copybtn=document.querySelector("[data-copy]");
 const copyMsg=document.querySelector("[data-copyMsg]");
 const uppercasecheck=document.querySelector("#uppercase");
 const lowercasecheck=document.querySelector("#lowercase");
-const numbercheck=document.querySelector("#numbers");
-const symbols=document.querySelector("#symbols");
+const numberCheck=document.querySelector("#numbers");
+const symbolsCheck=document.querySelector("#symbols");
 const indicator=document.querySelector("[data-indicator]");
 const generator=document.querySelector(".generatorButton");
 const allcheckbox=document.querySelectorAll("input[type=checkbox]");
+const symbols=' ~!@#$%^&*()_+=-;\,./<>?||":{}</>';
 
 let password="";
 let passwordlength=10;
@@ -45,5 +46,5 @@ function generateupperCase(){
     return String.fromCharCode( getRndInteger(65,91));
 }
 function generateSymbol(){
-    
+
 }
