@@ -30,5 +30,20 @@ function setIndicator(color){
 }
 
 function getRndInteger(min,max){
+   return Math.floor(Math.random()*(max-min)) +min;
+}
 
+function generateRandomNumber(){
+    return getRndInteger(0,9);
+}
+
+function generateLowerCase(){
+    return String.fromCharCode( getRndInteger(97,123));
+}
+
+function generateupperCase(){
+    return String.fromCharCode( getRndInteger(65,91));
+}
+function generateSymbol(){
+    
 }
