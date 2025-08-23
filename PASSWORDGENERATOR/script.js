@@ -130,7 +130,21 @@ generatebtn.addEventListener('click',()=>{
         handleSlider();
     }
 
+    function shufflePassword(array){
+        //fisher yates method
+        for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        }
+        let str = "";
+        array.forEach((el) => (str += el));
+        return str;
+    }
+
     //new password journey
+    console.log("Sarting the journey");
     //remove old pwd
     password="";
 
@@ -157,8 +171,29 @@ generatebtn.addEventListener('click',()=>{
     if(numberCheck.checked){
         funcArr.push(generateRandomNumber);
     }
-    if(symbolsCheck.checked)
+    if(symbolsCheck.checked){
         funcArr.push(generateSymbol);
-    
+    }
+
+    //complsory addition
+    for(let i=0;i<funcArr.length;i++){
+        password+=funcArr[i]();
+    }
+    console.log("complsory addition done");
+    //remaining addtion
+    for(let i=0; i<passwordlength-funcArr.length;i++){
+        let randIndex=getRndInteger(0,funcArr.length);
+        password += funcArr[randIndex]();
+    }
+    console.log("remaining addition done");
+
+    //shuffle the pwd
+    password=shufflePassword(Array.from(password));
+    console.log("shuffling done");
+
+    //show in ui
+    passwordDisplay.value=password;
+    //calculate strength
+    calcstrength;
 
 });
