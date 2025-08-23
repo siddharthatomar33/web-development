@@ -50,7 +50,7 @@ function generateSymbol(){
     const randNUM=getRndInteger(0,symbols.length);
     return symbols.charAt(randNUM);
 }
-//checked 
+//checked true/false
 function calcstrength(){
 
     let hasUpper = false;
@@ -71,4 +71,5 @@ function calcstrength(){
         setIndicator("#f00");
     }
 }
+
 //copy content
