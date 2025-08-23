@@ -20,7 +20,7 @@ handleSlider();
 //set strength circle to grey
 
 //set pwd length
-function handleSlider(){
+function handleSlider(){//handleSlider UI may deisplay ka kaam karega
     inputSlider.value=passwordlength;
     lengthDisplay.innerText=passwordlength;
 }
@@ -122,5 +122,10 @@ copybtn.addEventListener('click',()=>{
 
 //generate pwd
 generatebtn.addEventListener('click',()=>{
-    
+    //none of the checkbox are selected
+    if(checkCount<=0)
+        return;
+    if(passwordlength<checkCount){
+        
+    }
 });
