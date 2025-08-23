@@ -90,6 +90,25 @@ async function copyContent() {
     },2000)
 }
 
+function handleCheckboxChange() {
+    checkCount=0;
+    allcheckbox.forEach((checkbox)=>{
+        checkCount++;   //count krlia ki kitne checked hai
+    })
+
+    //special condition
+    if(passwordLength<checkCount){
+        passwordLength=checkCount;
+        handleSlider();
+    }
+}
+
+
+
+allcheckbox.forEach((checkbox)=>{
+checkbox.addEventListener('change',handleCheckboxChange)
+})
+
 //slider ka event
 inputSlider.addEventListener('input',(e) => {
     passwordlength=e.target.value;
