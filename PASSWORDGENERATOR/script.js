@@ -73,3 +73,24 @@ function calcstrength(){
 }
 
 //copy content
+async function copycontent() {
+    try{
+    //clipboard ke upper write krta hai
+    await navigator.clipboard.writeText(passwordDisplay.value);
+    copyMsg.innerText="copied";//capied display hoga
+    }
+    catch(e){
+        copyMsg.innerText="failed";
+    }
+    //to make copy wala span visible
+    copyMsg.classList.add("active");
+
+    setTimeout( () => {
+        copyMsg.classList.remove("active");
+    },2000)
+}
+
+inputSlider.addEventListener('input',(e) => {
+    passwordlength=e.target.value;
+    handleSlider();
+})
