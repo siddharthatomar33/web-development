@@ -73,7 +73,7 @@ function calcstrength(){
 }
 
 //copy content
-async function copycontent() {
+async function copyContent() {
     try{
     //clipboard ke upper write krta hai
     await navigator.clipboard.writeText(passwordDisplay.value);
@@ -90,7 +90,18 @@ async function copycontent() {
     },2000)
 }
 
+//slider ka event
 inputSlider.addEventListener('input',(e) => {
     passwordlength=e.target.value;
     handleSlider();
 })
+
+copybtn.addEventListener('click',()=>{
+    if(passwordDisplay.value)
+        copyContent();
+})
+
+//generate pwd
+generatebtn.addEventListener('click',()=>{
+    
+});
