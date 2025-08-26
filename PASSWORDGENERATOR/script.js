@@ -10,6 +10,7 @@ const numberCheck=document.querySelector("#numbers");
 const symbolsCheck=document.querySelector("#symbols");
 const indicator=document.querySelector("[data-indicator]");
 const generator=document.querySelector(".generatorButton");
+const generatebtn = document.querySelector(".generatorButton");
 const allcheckbox=document.querySelectorAll("input[type=checkbox]");
 const symbols=' ~!@#$%^&*()_+=-;\,./<>?||":{}</>';
 
@@ -123,7 +124,7 @@ copybtn.addEventListener('click',()=>{
 //generate pwd
 generatebtn.addEventListener('click',()=>{
     //none of the checkbox are selected
-    if(checkCount<=0)return;
+    if(checkCount<=0) return;
 
     if(passwordLength<checkCount){
         passwordLength=checkCount;
