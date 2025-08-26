@@ -14,15 +14,15 @@ const allcheckbox=document.querySelectorAll("input[type=checkbox]");
 const symbols=' ~!@#$%^&*()_+=-;\,./<>?||":{}</>';
 
 let password="";
-let passwordlength=10;
-let checkCount=1;
+let passwordLength=10;
+let checkCount=0;
 handleSlider();
 //set strength circle to grey
 
 //set pwd length
 function handleSlider(){//handleSlider UI may deisplay ka kaam karega
-    inputSlider.value=passwordlength;
-    lengthDisplay.innerText=passwordlength;
+    inputSlider.value=passwordLength;
+    lengthDisplay.innerText=passwordLength;
 }
 
 function setIndicator(color){
@@ -93,7 +93,7 @@ async function copyContent() {
 function handleCheckboxChange() {
     checkCount=0;
     allcheckbox.forEach((checkbox)=>{
-        checkCount++;   //count krlia ki kitne checked hai
+        if(checkbox.checked)checkCount++;   //count krlia ki kitne checked hai
     })
 
     //special condition
@@ -111,7 +111,7 @@ checkbox.addEventListener('change',handleCheckboxChange)
 
 //slider ka event
 inputSlider.addEventListener('input',(e) => {
-    passwordlength=e.target.value;
+    passwordLength=e.target.value;
     handleSlider();
 })
 
@@ -123,10 +123,10 @@ copybtn.addEventListener('click',()=>{
 //generate pwd
 generatebtn.addEventListener('click',()=>{
     //none of the checkbox are selected
-    if(checkCount<=0)
-        return;
-    if(passwordlength<checkCount){
-        passwordlength=checkCount;
+    if(checkCount<=0)return;
+
+    if(passwordLength<checkCount){
+        passwordLength=checkCount;
         handleSlider();
     }
 
@@ -181,7 +181,7 @@ generatebtn.addEventListener('click',()=>{
     }
     console.log("complsory addition done");
     //remaining addtion
-    for(let i=0; i<passwordlength-funcArr.length;i++){
+    for(let i=0; i<passwordLength-funcArr.length;i++){
         let randIndex=getRndInteger(0,funcArr.length);
         password += funcArr[randIndex]();
     }
@@ -194,6 +194,6 @@ generatebtn.addEventListener('click',()=>{
     //show in ui
     passwordDisplay.value=password;
     //calculate strength
-    calcstrength;
+    calcstrength();
 
 });
