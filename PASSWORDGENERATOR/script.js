@@ -194,7 +194,7 @@ generatebtn.addEventListener('click',()=>{
 
     //show in ui
     passwordDisplay.value=password;
-    //calculate strength
+    //calculate strength...
     calcstrength();
 
 });
