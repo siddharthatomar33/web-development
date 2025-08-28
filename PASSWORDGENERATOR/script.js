@@ -192,7 +192,7 @@ generatebtn.addEventListener('click',()=>{
     password=shufflePassword(Array.from(password));
     console.log("shuffling done");
 
-    //show in ui
+    //show in ui..
     passwordDisplay.value=password;
     //calculate strength...
     calcstrength();
