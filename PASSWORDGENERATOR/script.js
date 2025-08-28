@@ -188,7 +188,7 @@ generatebtn.addEventListener('click',()=>{
     }
     console.log("remaining addition done");
 
-    //shuffle the pwd.
+    //shuffle the pwd..
     password=shufflePassword(Array.from(password));
     console.log("shuffling done");
 
