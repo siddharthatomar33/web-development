@@ -23,7 +23,7 @@ handleSlider();
 
 //set pwd length
 function handleSlider(){
-    //handleSlider UI may deisplay ka kaam karega
+    //handleSlider UI may display ka kaam karega
     inputSlider.value=passwordLength;
     lengthDisplay.innerText=passwordLength;
 }
@@ -78,9 +78,9 @@ function calcstrength(){
 //copy content
 async function copyContent() {
     try{
-    //clipboard ke u  pper write krta hai
+    //clipboard ke u pper write krta hai
     await navigator.clipboard.writeText(passwordDisplay.value);
-    copyMsg.innerText="copied";//capied display hoga
+    copyMsg.innerText="copied";//copied display hoga
     }
     catch(e){
         copyMsg.innerText="failed";
