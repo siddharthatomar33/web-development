@@ -98,9 +98,9 @@ function handleCheckboxChange() {
     allcheckbox.forEach((checkbox)=>{
         if(checkbox.checked)
             checkCount++;   //count krlia ki kitne checked hai
-    })
+    });
 
-    //special condition
+    //special condition// agaar password ki length kam hai checked count se toh,password length ko = checked count ke
     if(passwordLength<checkCount){
         passwordLength=checkCount;
         handleSlider();
