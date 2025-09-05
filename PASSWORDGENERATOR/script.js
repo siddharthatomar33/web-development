@@ -96,7 +96,8 @@ async function copyContent() {
 function handleCheckboxChange() {
     checkCount=0;
     allcheckbox.forEach((checkbox)=>{
-        if(checkbox.checked)checkCount++;   //count krlia ki kitne checked hai
+        if(checkbox.checked)
+            checkCount++;   //count krlia ki kitne checked hai
     })
 
     //special condition
@@ -105,8 +106,6 @@ function handleCheckboxChange() {
         handleSlider();
     }
 }
-
-
 
 allcheckbox.forEach((checkbox)=>{
 checkbox.addEventListener('change',handleCheckboxChange)
