@@ -53,7 +53,7 @@ function generateSymbol(){
     const randNUM=getRndInteger(0,symbols.length);
     return symbols.charAt(randNUM);
 }
-//checked true/false
+//checked true/false.
 function calcstrength(){
 
     let hasUpper = false;
