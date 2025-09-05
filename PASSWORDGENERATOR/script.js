@@ -11,7 +11,7 @@ const symbolsCheck=document.querySelector("#symbols");
 const indicator=document.querySelector("[data-indicator]");
 const generator=document.querySelector(".generatorButton");
 const generatebtn = document.querySelector(".generatorButton");
-const allCheckbox=document.querySelectorAll("input[type=checkbox]");
+const allcheckbox=document.querySelectorAll("input[type=checkbox]");
 const symbols = '~!@#$%^&*()_+=-{}[]:;<>,.?/';
 
 let password="";
@@ -21,7 +21,8 @@ handleSlider();
 //set strength circle to grey
 
 //set pwd length
-function handleSlider(){//handleSlider UI may deisplay ka kaam karega
+function handleSlider(){
+    //handleSlider UI may deisplay ka kaam karega
     inputSlider.value=passwordLength;
     lengthDisplay.innerText=passwordLength;
 }
