@@ -78,7 +78,7 @@ function calcstrength(){
 //copy content
 async function copyContent() {
     try{
-    //clipboard ke upper write krta hai
+    //clipboard ke u  pper write krta hai
     await navigator.clipboard.writeText(passwordDisplay.value);
     copyMsg.innerText="copied";//capied display hoga
     }
