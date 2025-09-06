@@ -39,7 +39,7 @@ function getRndInteger(min,max){
    return Math.floor(Math.random()*(max-min)) +min;
 }
 
-//
+//to get random no. between 0-9
 function generateRandomNumber(){
     return getRndInteger(0,9);
 }
@@ -56,6 +56,7 @@ function generateSymbol(){
     const randNUM=getRndInteger(0,symbols.length);
     return symbols.charAt(randNUM);
 }
+
 //checked true/false.
 function calcstrength(){
 
@@ -81,7 +82,7 @@ function calcstrength(){
 //copy content
 async function copyContent() {
     try{
-    //clipboard ke u pper write krta hai
+    //clipboard ke upper write krta hai
     await navigator.clipboard.writeText(passwordDisplay.value);
     copyMsg.innerText="copied";//copied display hoga
     }
