@@ -130,12 +130,12 @@ checkbox.addEventListener('change',handleCheckboxChange)
 })
 
 //slider ka event
-inputSlider.addEventListener('input',(e) => {//event listner
+inputSlider.addEventListener('input',(e) => {//eventlistner
     passwordLength=e.target.value;
     handleSlider();
 })
 
-copybtn.addEventListener('click',()=>{
+copybtn.addEventListener('click',()=>{//eventlistner
     if(passwordDisplay.value)
         copyContent();
 })
@@ -143,10 +143,10 @@ copybtn.addEventListener('click',()=>{
 //generate pwd
 generatebtn.addEventListener('click',()=>{
     //none of the checkbox are selected
-    if(checkCount<=0) return;
+    if(checkCount==0) return;//koi bhi checkbox check nhi hai toh pwd generate nhi hoga
 
-    if(passwordLength<checkCount){
-        passwordLength=checkCount;
+    if(passwordLength < checkCount){//pwd chota h checkbox click se
+        passwordLength=checkCount;//toh same count ka pwd banadia
         handleSlider();
     }
 
@@ -169,6 +169,7 @@ generatebtn.addEventListener('click',()=>{
     //     password+=generateSymbol();
     // }
     let funcArr=[];
+    
     if(uppercasecheck.checked)
         funcArr.push(generateupperCase);
     
