@@ -18,3 +18,38 @@
   --vb-cyan2: hsl(177, 92%, 70%);
   --dk-text: hsl(198, 20%, 13%);
 }
+
+body{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(90deg, rgba(255, 255, 0, 1) 0%, rgba(244, 92, 54, 1) 100%, rgba(238, 130, 238, 1) 100%);
+}
+.container{
+    width: 90%;
+    max-width:450px ;
+}
+
+h1{
+    color: black;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container{
+    position: relative;
+    background-color:orangered ;
+    border-radius: 1rem;
+    border-bottom: 0.35 solid var(--pl-white);
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+.display {
+    width: 100%;
+
+}
