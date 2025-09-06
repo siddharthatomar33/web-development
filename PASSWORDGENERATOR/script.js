@@ -93,6 +93,20 @@ async function copyContent() {
     },2000)
 }
 
+function shufflePassword(array){
+        //fisher yates method
+        for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        }
+
+        let str = "";
+        array.forEach((el) => (str += el));
+        return str;
+    }
+
 function handleCheckboxChange() {
     checkCount=0;
     allcheckbox.forEach((checkbox)=>{
@@ -132,19 +146,6 @@ generatebtn.addEventListener('click',()=>{
         handleSlider();
     }
 
-    function shufflePassword(array){
-        //fisher yates method
-        for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-        }
-        let str = "";
-        array.forEach((el) => (str += el));
-        return str;
-    }
-
     //new password journey
     console.log("Sarting the journey");
     //remove old pwd
@@ -164,27 +165,28 @@ generatebtn.addEventListener('click',()=>{
     //     password+=generateSymbol();
     // }
     let funcArr=[];
-    if(uppercasecheck.checked){
+    if(uppercasecheck.checked)
         funcArr.push(generateupperCase);
-    }
-    if(lowercasecheck.checked){
+    
+    if(lowercasecheck.checked)
         funcArr.push(generateLowerCase);
-    }
-    if(numberCheck.checked){
+    
+    if(numberCheck.checked)
         funcArr.push(generateRandomNumber);
-    }
-    if(symbolsCheck.checked){
+    
+    if(symbolsCheck.checked)
         funcArr.push(generateSymbol);
-    }
-
+    
     //complsory addition
-    for(let i=0;i<funcArr.length;i++){
+    for(let i=0;i<funcArr.length;i++)
         password+=funcArr[i]();
-    }
+    
     console.log("complsory addition done");
+
     //remaining addtion
     for(let i=0; i<passwordLength-funcArr.length;i++){
         let randIndex=getRndInteger(0,funcArr.length);
+        console.log("randRndex"+randIndex);
         password += funcArr[randIndex]();
     }
     console.log("remaining addition done");
