@@ -130,7 +130,7 @@ checkbox.addEventListener('change',handleCheckboxChange)
 })
 
 //slider ka event
-inputSlider.addEventListener('input',(e) => {
+inputSlider.addEventListener('input',(e) => {//event listner
     passwordLength=e.target.value;
     handleSlider();
 })
