@@ -100,9 +100,9 @@ async function copyContent() {
 function shufflePassword(array){
         //fisher yates method
         for (let i = array.length - 1; i > 0; i--) {
-            //random j,find out using random function
+        //random j,find out using random function
         const j = Math.floor(Math.random() * (i + 1));
-        
+        //swap number at i and j index
         const temp = array[i];
         array[i] = array[j];
         array[j] = temp;
