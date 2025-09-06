@@ -182,20 +182,28 @@ h1{
     background-image: linear-gradient(var(--vb-violet),var(--vb-violet));
     background-repeat: no-repeat;
     border: none;
-    outline:none ;
+    outline:none;
+    z-index: 1;
 }
 
 .slider::-webkit-slider-thumb{
+    position: relative;
+    z-index: 1;
     appearance: none;
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
     background-color: yellow;
-    cursor: pointer;
-    margin: top -3px;
+    cursor:pointer;
+    margin-top: -3px;
     box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
     transition: all 100ms ease-in;
 }
 .slider:focus{
     outline:3px solid var(--vb-yellow);
+}
+.slider::-webkit-slider-thumb:hover{
+    outline:2px solid var(--vb-yellow);
+    background-color:aqua;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
 }
