@@ -46,7 +46,7 @@ h1{
     position: relative;
     background-color:rgb(80, 45, 196) ;
     border-radius: 1rem;
-    border-bottom: 0.35rem solid var(--pl-white);
+    border-bottom: 0.35rem solid yellow;
     margin: 1rem 0;
     padding-top: 0.35rem;
 }
@@ -87,7 +87,7 @@ h1{
     background-color: rgb(80, 45, 196); 
     border-radius: 1rem;
     padding: 2rem;
-    border-bottom: 0.35rem solid var(--pl-white)   
+    border-bottom: 0.35rem solid yellow;   
 }
 
 .length-container{
@@ -105,4 +105,33 @@ h1{
     color: yellow;
     font-size: 1.5rem;
 
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strength-container p{
+     color: yellow;
+    font-size: 1.5rem;
+}
+.indicator{
+    width: 1.5px;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.generatebutton{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: rgb(223, 19, 53);
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.25rem;
 }
