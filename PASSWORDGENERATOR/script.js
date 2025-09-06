@@ -6,11 +6,10 @@ const copybtn=document.querySelector("[data-copy]");
 const copyMsg=document.querySelector("[data-copyMsg]");
 const uppercasecheck=document.querySelector("#uppercase");
 const lowercasecheck=document.querySelector("#lowercase");
-const numberCheck=document.querySelector("#numbers");
-const symbolsCheck=document.querySelector("#symbols");
+const numberscheck=document.querySelector("#numbers");
+const symbolscheck=document.querySelector("#symbols");
 const indicator=document.querySelector("[data-indicator]");
-const generator=document.querySelector(".generatorButton");
-const generatebtn = document.querySelector(".generatorButton");
+const generatebtn = document.querySelector(".generatorbutton");
 const allcheckbox=document.querySelectorAll("input[type=checkbox]");
 const symbols = '~!@#$%^&*()_+=-{}[]:;<>,.?/';
 
@@ -18,7 +17,6 @@ const symbols = '~!@#$%^&*()_+=-{}[]:;<>,.?/';
 let password="";
 let passwordLength=10;
 let checkCount=0;
-
 handleSlider();
 //set strength circle to grey
 
@@ -32,6 +30,7 @@ function handleSlider(){
 function setIndicator(color){
     indicator.style.backgroundColor=color;
     //shadow
+    indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 }
 
 //to get a random integer in range
@@ -65,10 +64,10 @@ function calcstrength(){
     let hasNum = false;
     let hasSym = false;
 
-    if (uppercaseCheck.checked) hasUpper = true;
-    if (lowercaseCheck.checked) hasLower = true;
-    if (numbersCheck.checked) hasNum = true;
-    if (symbolsCheck.checked) hasSym = true;
+    if (uppercasecheck.checked) hasUpper = true;
+    if (lowercasecheck.checked) hasLower = true;
+    if (numberscheck.checked) hasNum = true;
+    if (symbolscheck.checked) hasSym = true;
 
     if (hasUpper && hasLower && (hasNum || hasSym) && passwordLength >= 8) {
         setIndicator("#0f0");
@@ -178,10 +177,10 @@ generatebtn.addEventListener('click',()=>{
     if(lowercasecheck.checked)
         funcArr.push(generateLowerCase);
     
-    if(numberCheck.checked)
+    if(numberscheck.checked)
         funcArr.push(generateRandomNumber);
     
-    if(symbolsCheck.checked)
+    if(symbolscheck.checked)
         funcArr.push(generateSymbol);
     
     //complsory addition, of checked boxes in pwd
