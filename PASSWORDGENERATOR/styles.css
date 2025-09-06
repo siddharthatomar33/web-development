@@ -135,3 +135,39 @@ h1{
     font-weight: 600;
     font-size: 1.25rem;
 }
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem; 
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--vb-cyan);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+
+}
+.check input:checked{
+    background-color: var(--vb-cyan);
+}
+
+.check input:checked::before{
+   content: '✔';    
+   position: absolute;
+   color: var(--dk-text);
+   font-size: 1.0rem;
+   font-weight: 600px;
+   left:50%;
+   top:-3.5px ;
+   transform: translateX(-50%) translateY(20%);
+}
+.check label{
+    color:var(--pl-white);
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+
+}
