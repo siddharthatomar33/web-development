@@ -87,6 +87,22 @@ h1{
     background-color: rgb(80, 45, 196); 
     border-radius: 1rem;
     padding: 2rem;
-    border-bottom: 0.35rem solid var(--pl-white)
-    
+    border-bottom: 0.35rem solid var(--pl-white)   
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+
+}
+.length-container p:nth-child(2){
+    color: yellow;
+    font-size: 1.5rem;
+
 }
