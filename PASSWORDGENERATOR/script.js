@@ -100,7 +100,9 @@ async function copyContent() {
 function shufflePassword(array){
         //fisher yates method
         for (let i = array.length - 1; i > 0; i--) {
+            //random j,find out using random function
         const j = Math.floor(Math.random() * (i + 1));
+        
         const temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -169,7 +171,7 @@ generatebtn.addEventListener('click',()=>{
     //     password+=generateSymbol();
     // }
     let funcArr=[];
-    
+
     if(uppercasecheck.checked)
         funcArr.push(generateupperCase);
     
@@ -182,13 +184,13 @@ generatebtn.addEventListener('click',()=>{
     if(symbolsCheck.checked)
         funcArr.push(generateSymbol);
     
-    //complsory addition
+    //complsory addition, of checked boxes in pwd
     for(let i=0;i<funcArr.length;i++)
         password+=funcArr[i]();
     
     console.log("complsory addition done");
 
-    //remaining addtion
+    //remaining addtion after checked  
     for(let i=0; i<passwordLength-funcArr.length;i++){
         let randIndex=getRndInteger(0,funcArr.length);
         console.log("randRndex"+randIndex);
