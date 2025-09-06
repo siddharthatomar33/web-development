@@ -9,7 +9,7 @@ const lowercasecheck=document.querySelector("#lowercase");
 const numberscheck=document.querySelector("#numbers");
 const symbolscheck=document.querySelector("#symbols");
 const indicator=document.querySelector("[data-indicator]");
-const generatebtn = document.querySelector(".generatorbutton");
+const generatebtn = document.querySelector(".generatebutton");
 const allcheckbox=document.querySelectorAll("input[type=checkbox]");
 const symbols = '~!@#$%^&*()_+=-{}[]:;<>,.?/';
 
