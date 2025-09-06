@@ -34,10 +34,12 @@ function setIndicator(color){
     //shadow
 }
 
+//to get a random integer in range
 function getRndInteger(min,max){
    return Math.floor(Math.random()*(max-min)) +min;
 }
 
+//
 function generateRandomNumber(){
     return getRndInteger(0,9);
 }
